@@ -59,7 +59,7 @@ export default function Home() {
             <div className="flex-1 flex justify-center lg:justify-end">
               <div className="relative w-[280px] h-[280px] md:w-[320px] md:h-[320px] lg:w-[380px] lg:h-[380px] rounded-full overflow-hidden border-4 border-background shadow-xl">
                 <Image
-                  src="/placeholder.svg?height=400&width=400"
+                  src="/placeholder.png?height=400&width=400"
                   alt="Profile"
                   fill
                   className="object-cover"
@@ -145,7 +145,7 @@ export default function Home() {
             <ProjectCard
               title="E-commerce Platform"
               description="A full-featured e-commerce platform built with Next.js and Stripe integration."
-              image="/placeholder.svg?height=400&width=600"
+              image="/placeholder.png?height=400&width=600"
               tags={["Next.js", "React", "Stripe", "Tailwind CSS"]}
               demoUrl="https://example.com"
               repoUrl="https://github.com"
@@ -153,7 +153,7 @@ export default function Home() {
             <ProjectCard
               title="Task Management App"
               description="A drag-and-drop task management application with real-time updates."
-              image="/placeholder.svg?height=400&width=600"
+              image="/placeholder.png?height=400&width=600"
               tags={["React", "Firebase", "DnD", "Material UI"]}
               demoUrl="https://example.com"
               repoUrl="https://github.com"
@@ -161,7 +161,7 @@ export default function Home() {
             <ProjectCard
               title="Portfolio Website"
               description="A responsive portfolio website built with Next.js and Tailwind CSS."
-              image="/placeholder.svg?height=400&width=600"
+              image="/placeholder.png?height=400&width=600"
               tags={["Next.js", "Tailwind CSS", "Framer Motion"]}
               demoUrl="https://example.com"
               repoUrl="https://github.com"
@@ -169,7 +169,7 @@ export default function Home() {
             <ProjectCard
               title="Weather Dashboard"
               description="A weather dashboard that displays current and forecasted weather data."
-              image="/placeholder.svg?height=400&width=600"
+              image="/placeholder.png?height=400&width=600"
               tags={["React", "OpenWeather API", "Chart.js"]}
               demoUrl="https://example.com"
               repoUrl="https://github.com"
@@ -177,7 +177,7 @@ export default function Home() {
             <ProjectCard
               title="Recipe Finder"
               description="A recipe finder application that allows users to search for recipes by ingredients."
-              image="/placeholder.svg?height=400&width=600"
+              image="/placeholder.png?height=400&width=600"
               tags={["Next.js", "Spoonacular API", "Tailwind CSS"]}
               demoUrl="https://example.com"
               repoUrl="https://github.com"
@@ -185,7 +185,7 @@ export default function Home() {
             <ProjectCard
               title="Fitness Tracker"
               description="A fitness tracking application that allows users to track their workouts and progress."
-              image="/placeholder.svg?height=400&width=600"
+              image="/placeholder.png?height=400&width=600"
               tags={["React", "Chart.js", "Firebase"]}
               demoUrl="https://example.com"
               repoUrl="https://github.com"
