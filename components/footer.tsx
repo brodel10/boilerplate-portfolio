@@ -1,16 +1,16 @@
-import Link from "next/link"
-import { Github, Linkedin, Twitter, Instagram } from "lucide-react"
+import Link from "next/link";
+import { Github, Linkedin, Twitter, Instagram } from "lucide-react";
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="border-t bg-muted/50">
       <div className="container px-4 md:px-6 py-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center space-x-2 mb-4 md:mb-0">
-            <span className="text-lg font-bold">Alex</span>
-            <span className="text-lg font-bold text-primary">Dev</span>
+            <span className="text-lg font-bold">My</span>
+            <span className="text-lg font-bold text-primary">Portfolio</span>
           </div>
           <div className="flex space-x-4">
             <Link
@@ -52,30 +52,9 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-6 text-center text-sm text-muted-foreground">
-          <p>© {currentYear} Alex Dev. All rights reserved.</p>
-          <p className="mt-1">
-            Built with{" "}
-            <Link
-              href="https://nextjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline hover:text-primary transition-colors"
-            >
-              Next.js
-            </Link>{" "}
-            and{" "}
-            <Link
-              href="https://tailwindcss.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline hover:text-primary transition-colors"
-            >
-              Tailwind CSS
-            </Link>
-          </p>
+          <p>© {currentYear} My Portfolio. All rights reserved.</p>
         </div>
       </div>
     </footer>
-  )
+  );
 }
-

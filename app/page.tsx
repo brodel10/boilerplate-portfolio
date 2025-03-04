@@ -1,17 +1,20 @@
-import Link from "next/link"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { ArrowRight, Github, Mail, Download } from "lucide-react"
-import ProjectCard from "@/components/project-card"
-import SkillsSection from "@/components/skills-section"
-import ContactForm from "@/components/contact-form"
+import Link from "next/link";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { ArrowRight, Github, Mail, Download } from "lucide-react";
+import ProjectCard from "@/components/project-card";
+import SkillsSection from "@/components/skills-section";
+import ContactForm from "@/components/contact-form";
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section id="hero" className="relative py-20 md:py-28 lg:py-36 overflow-hidden">
+      <section
+        id="hero"
+        className="relative py-20 md:py-28 lg:py-36 overflow-hidden"
+      >
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(45%_40%_at_50%_60%,rgba(var(--primary-rgb),0.12),transparent)]" />
         <div className="container px-4 md:px-6">
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
@@ -24,16 +27,18 @@ export default function Home() {
                   Available for work
                 </Badge>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter">
-                  Hi, I'm <span className="text-primary">Alex</span>
+                  Hi, I'm <span className="text-primary">Rodel</span>
                 </h1>
                 <p className="text-xl md:text-2xl text-muted-foreground">
-                  A passionate frontend developer crafting beautiful web experiences
+                  A passionate frontend developer crafting beautiful web
+                  experiences
                 </p>
               </div>
               <p className="text-muted-foreground max-w-[600px]">
-                I specialize in building modern, responsive websites and applications using the latest technologies.
-                With a keen eye for design and a love for clean code, I create digital experiences that are both
-                functional and visually appealing.
+                I specialize in building modern, responsive websites and
+                applications using the latest technologies. With a keen eye for
+                design and a love for clean code, I create digital experiences
+                that are both functional and visually appealing.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Button asChild>
@@ -71,38 +76,52 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="flex flex-col md:flex-row gap-12 items-center">
             <div className="md:w-1/2 space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tighter">About Me</h2>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tighter">
+                About Me
+              </h2>
               <p className="text-muted-foreground">
-                I'm a frontend developer with a passion for creating intuitive and engaging user experiences. With 5
-                years of experience in web development, I've worked on a variety of projects from small business
-                websites to complex web applications.
+                I'm a frontend developer with a passion for creating intuitive
+                and engaging user experiences. With 5 years of experience in web
+                development, I've worked on a variety of projects from small
+                business websites to complex web applications.
               </p>
               <p className="text-muted-foreground">
-                My journey in web development began during my computer science studies, where I discovered my love for
-                the intersection of technology and design. Since then, I've been constantly learning and improving my
-                skills to stay at the forefront of web development trends.
+                My journey in web development began during my computer science
+                studies, where I discovered my love for the intersection of
+                technology and design. Since then, I've been constantly learning
+                and improving my skills to stay at the forefront of web
+                development trends.
               </p>
               <p className="text-muted-foreground">
-                When I'm not coding, you can find me hiking in the mountains, experimenting with photography, or
-                exploring new coffee shops in the city.
+                When I'm not coding, you can find me hiking in the mountains,
+                experimenting with photography, or exploring new coffee shops in
+                the city.
               </p>
             </div>
             <div className="md:w-1/2 grid grid-cols-2 gap-4">
               <div className="bg-background p-6 rounded-lg shadow-sm">
                 <h3 className="font-medium text-lg mb-2">Education</h3>
-                <p className="text-sm text-muted-foreground">BSc in Computer Science, University of Technology</p>
+                <p className="text-sm text-muted-foreground">
+                  BSc in Computer Science, University of Technology
+                </p>
               </div>
               <div className="bg-background p-6 rounded-lg shadow-sm">
                 <h3 className="font-medium text-lg mb-2">Experience</h3>
-                <p className="text-sm text-muted-foreground">5+ years of professional web development experience</p>
+                <p className="text-sm text-muted-foreground">
+                  5+ years of professional web development experience
+                </p>
               </div>
               <div className="bg-background p-6 rounded-lg shadow-sm">
                 <h3 className="font-medium text-lg mb-2">Location</h3>
-                <p className="text-sm text-muted-foreground">San Francisco, California</p>
+                <p className="text-sm text-muted-foreground">
+                  San Francisco, California
+                </p>
               </div>
               <div className="bg-background p-6 rounded-lg shadow-sm">
                 <h3 className="font-medium text-lg mb-2">Interests</h3>
-                <p className="text-sm text-muted-foreground">UI/UX Design, Photography, Hiking</p>
+                <p className="text-sm text-muted-foreground">
+                  UI/UX Design, Photography, Hiking
+                </p>
               </div>
             </div>
           </div>
@@ -113,10 +132,13 @@ export default function Home() {
       <section id="projects" className="py-16 md:py-24">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tighter mb-4">Featured Projects</h2>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tighter mb-4">
+              Featured Projects
+            </h2>
             <p className="text-muted-foreground max-w-[800px]">
-              Here are some of the projects I've worked on. Each project represents a unique challenge and showcases
-              different aspects of my skills and expertise.
+              Here are some of the projects I've worked on. Each project
+              represents a unique challenge and showcases different aspects of
+              my skills and expertise.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -183,10 +205,12 @@ export default function Home() {
       <section id="skills" className="py-16 md:py-24 bg-muted/50">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tighter mb-4">Skills & Expertise</h2>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tighter mb-4">
+              Skills & Expertise
+            </h2>
             <p className="text-muted-foreground max-w-[800px]">
-              I've worked with a variety of technologies and tools throughout my career. Here are some of the key skills
-              I bring to the table.
+              I've worked with a variety of technologies and tools throughout my
+              career. Here are some of the key skills I bring to the table.
             </p>
           </div>
           <SkillsSection />
@@ -198,10 +222,13 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="flex flex-col md:flex-row gap-12">
             <div className="md:w-1/2 space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tighter">Get In Touch</h2>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tighter">
+                Get In Touch
+              </h2>
               <p className="text-muted-foreground">
-                I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
-                Feel free to reach out using the contact form or through my social media profiles.
+                I'm always open to discussing new projects, creative ideas, or
+                opportunities to be part of your vision. Feel free to reach out
+                using the contact form or through my social media profiles.
               </p>
               <div className="flex flex-col space-y-3 mt-6">
                 <div className="flex items-center">
@@ -233,6 +260,5 @@ export default function Home() {
         </div>
       </section>
     </div>
-  )
+  );
 }
-
