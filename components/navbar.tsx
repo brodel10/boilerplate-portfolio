@@ -1,76 +1,83 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { Button } from "@/components/ui/button"
-import { ModeToggle } from "@/components/mode-toggle"
-import { Menu, X } from "lucide-react"
+import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { ModeToggle } from "@/components/mode-toggle";
+import { Menu, X } from "lucide-react";
 
 const navItems = [
   { href: "#about", label: "About" },
   { href: "#projects", label: "Projects" },
   { href: "#skills", label: "Skills" },
   { href: "#contact", label: "Contact" },
-]
+];
 
 export default function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [activeSection, setActiveSection] = useState("")
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
-        setIsScrolled(true)
+        setIsScrolled(true);
       } else {
-        setIsScrolled(false)
+        setIsScrolled(false);
       }
 
       // Determine active section
-      const sections = navItems.map((item) => item.href.slice(1))
+      const sections = navItems.map((item) => item.href.slice(1));
       const currentSection = sections.find((section) => {
-        const element = document.getElementById(section)
+        const element = document.getElementById(section);
         if (element) {
-          const rect = element.getBoundingClientRect()
-          return rect.top <= 100 && rect.bottom > 100
+          const rect = element.getBoundingClientRect();
+          return rect.top <= 100 && rect.bottom > 100;
         }
-        return false
-      })
+        return false;
+      });
 
       if (currentSection) {
-        setActiveSection(currentSection)
+        setActiveSection(currentSection);
       }
-    }
+    };
 
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [])
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen)
-  }
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
 
   const handleNavClick = (href: string) => {
-    const element = document.querySelector(href)
+    const element = document.querySelector(href);
     if (element) {
-      const offsetTop = element.getBoundingClientRect().top + window.pageYOffset - 80
+      const offsetTop =
+        element.getBoundingClientRect().top + window.pageYOffset - 80;
       window.scrollTo({
         top: offsetTop,
         behavior: "smooth",
-      })
+      });
     }
-    setIsMobileMenuOpen(false)
-  }
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <header
       className={`sticky top-0 z-50 w-full transition-all duration-200 ${
-        isScrolled ? "bg-background/80 backdrop-blur-md shadow-sm" : "bg-transparent"
+        isScrolled
+          ? "bg-background/80 backdrop-blur-md shadow-sm"
+          : "bg-transparent"
       }`}
     >
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
-        <a href="#" className="flex items-center space-x-2" onClick={() => handleNavClick("#")}>
+        <a
+          href="#"
+          className="flex items-center space-x-2"
+          onClick={() => handleNavClick("#")}
+        >
           <span className="text-xl font-bold">My</span>
           <span className="text-xl font-bold text-primary">Portfolio</span>
         </a>
@@ -85,8 +92,8 @@ export default function Navbar() {
                 activeSection === item.href.slice(1) ? "text-primary" : ""
               }`}
               onClick={(e) => {
-                e.preventDefault()
-                handleNavClick(item.href)
+                e.preventDefault();
+                handleNavClick(item.href);
               }}
             >
               {item.label}
@@ -120,8 +127,8 @@ export default function Navbar() {
                   activeSection === item.href.slice(1) ? "text-primary" : ""
                 }`}
                 onClick={(e) => {
-                  e.preventDefault()
-                  handleNavClick(item.href)
+                  e.preventDefault();
+                  handleNavClick(item.href);
                 }}
               >
                 {item.label}
@@ -131,6 +138,5 @@ export default function Navbar() {
         </div>
       )}
     </header>
-  )
+  );
 }
-
